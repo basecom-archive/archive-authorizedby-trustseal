@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Authorizedby_Trustseal>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Authorizedby_Trustseal>
+    </modules>
+</config>

@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <authorizedby translate="label" module="trustseal">
+            <label>authorized.by</label>
+            <sort_order>1000</sort_order>
+        </authorizedby>
+    </tabs>
+    <sections>
+        <trustseal translate="label" module="trustseal">
+            <label>Trust-Seal</label>
+            <tab>authorizedby</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>0</show_in_store>
+            <groups>
+                <config translate="label">
+                    <label>Trust-Seal Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <activate>
+                            <label>Activate</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </activate>
+                        <position>
+                            <label>Position</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>trustseal/positionOptions</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </position>
+                        <position_alignment>
+                            <label>Alignment</label>
+                            <comment>Will only take place if position is set to 'Right Fixed'.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>trustseal/positionAlignmentOptions</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </position_alignment>
+                        <position_unit>
+                            <label>Unit</label>
+                            <comment>Will only take place if position is set to right fixed.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>trustseal/positionAlignmentUnitOptions</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </position_unit>
+                        <position_margin>
+                            <label>Margin</label>
+                            <comment>Will only take place if position is set to right fixed.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </position_margin>
+                        <product_verifictation>
+                            <label>Product Verification</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </product_verifictation>
+                    </fields>
+                </config>
+            </groups>
+        </trustseal>
+    </sections>
+</config>

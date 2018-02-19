@@ -1,0 +1,28 @@
+<?php /* @var $this Authorizedby_Trustseal_Block_Authorizedby */ ?>
+<?php if ($this->isEnabled()): ?>
+    <?php if ($this->isProductVerificationEnabled()): ?>
+        <?php $currentProduct = Mage::registry('current_product'); ?>
+        <?php if ($currentProduct): ?>
+            <?php $currentProductId = $currentProduct->getSku(); ?>
+        <?php endif; ?>
+    <?php endif; ?>
+    <script src="https://app.authorized.by/trustedretailers/api.js"></script>
+    <?php $position = $this->getBadgePosition(); ?>
+    <script>
+        var options = {
+            position: "<?php echo $position; ?>"
+        };
+
+        <?php if ('right-fixed' === $position): ?>
+            options.<?php echo $this->getBadgePositionAlignment(); ?> = "<?php echo $this->getBadgePositionMargin() . $this->getBadgePositionUnit(); ?>";
+        <?php endif; ?>
+
+        <?php if ($this->isProductVerificationEnabled() && $currentProductId): ?>
+            options.productId = "<?php echo $currentProductId; ?>"
+        <?php endif; ?>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            new AuthorizedByBadge(options).init();
+        });
+    </script>
+<?php endif; ?>
