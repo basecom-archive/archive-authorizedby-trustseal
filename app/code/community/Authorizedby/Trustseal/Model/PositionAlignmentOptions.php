@@ -2,6 +2,11 @@
 
 class Authorizedby_Trustseal_Model_PositionAlignmentOptions
 {
+    /**
+     * Options getter
+     *
+     * @return array
+     */
     public function toOptionArray() {
         $helper = Mage::helper('trustseal');
 

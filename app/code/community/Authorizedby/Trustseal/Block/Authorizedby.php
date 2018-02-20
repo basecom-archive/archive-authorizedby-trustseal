@@ -22,7 +22,7 @@ class Authorizedby_Trustseal_Block_Authorizedby extends Mage_Core_Block_Template
         return Mage::getStoreConfig('trustseal/config/position_margin');
     }
 
-    public function isProductVerificationEnabled() {
-        return Mage::getStoreConfig('trustseal/config/product_verifictation');
+    public function getProductVerificationAttribute() {
+        return Mage::getStoreConfig('trustseal/config/product_verifictation_attribute');
     }
 }
