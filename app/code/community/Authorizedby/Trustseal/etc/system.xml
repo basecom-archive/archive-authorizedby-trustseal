@@ -54,7 +54,7 @@
                         </position_alignment>
                         <position_unit>
                             <label>Unit</label>
-                            <comment>Will only take place if position is set to right fixed.</comment>
+                            <comment>Will only take place if position is set to 'Right Fixed'.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>trustseal/positionAlignmentUnitOptions</source_model>
                             <sort_order>4</sort_order>
@@ -64,22 +64,22 @@
                         </position_unit>
                         <position_margin>
                             <label>Margin</label>
-                            <comment>Will only take place if position is set to right fixed.</comment>
+                            <comment>Will only take place if position is set to 'Right Fixed'.</comment>
                             <frontend_type>text</frontend_type>
                             <sort_order>5</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
                         </position_margin>
-                        <product_verifictation>
-                            <label>Product Verification</label>
+                        <product_verifictation_attribute>
+                            <label>Attribute for Product Verification</label>
                             <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <source_model>trustseal/productVerificationAttributeOptions</source_model>
                             <sort_order>6</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
-                        </product_verifictation>
+                        </product_verifictation_attribute>
                     </fields>
                 </config>
             </groups>

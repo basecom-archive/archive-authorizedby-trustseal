@@ -66,6 +66,7 @@
             <config>
                 <activate>1</activate>
                 <position>right-two-thirds</position>
+                <product_verifictation_attribute>sku</product_verifictation_attribute>
             </config>
         </trustseal>
     </default>
