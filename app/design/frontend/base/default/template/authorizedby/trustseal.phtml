@@ -1,7 +1,8 @@
 <?php /* @var $this Authorizedby_Trustseal_Block_Authorizedby */ ?>
 <?php if ($this->isEnabled()): ?>
     <?php $currentProduct = Mage::registry('current_product'); ?>
-    <?php if ($currentProduct): ?>
+    <?php $currentProductId = false; ?>
+    <?php if ($currentProduct && $currentProduct->getId()): ?>
         <?php $attributeCode = $this->getProductVerificationAttribute(); ?>
         <?php $currentProductId = $currentProduct->getData($attributeCode); ?>
     <?php endif; ?>
