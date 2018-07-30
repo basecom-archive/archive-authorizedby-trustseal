@@ -1,0 +1,4 @@
+<?php /* @var $this Authorizedby_Trustseal_Block_Authorizedby */ ?>
+<?php if ($this->isEnabled() && $this->isIslandEnabled() && in_array('catalog_product_view', $this->getIslandPosition())): ?>
+    <div authorizedby="<?php echo $this->getIslandProductType(); ?>"></div>
+<?php endif; ?>

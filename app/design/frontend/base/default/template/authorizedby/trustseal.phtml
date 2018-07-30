@@ -8,13 +8,22 @@
     <?php endif; ?>
     <script src="https://app.authorized.by/trustedretailers/api.js"></script>
     <?php $position = $this->getBadgePosition(); ?>
+    <?php $language = $this->getLanguage(); ?>
     <script>
         var options = {
-            position: "<?php echo $position; ?>"
+            language: "<?php echo $language; ?>",
+            "embeddedOriginal.container.zIndex": <?php echo $this->getZIndex(); ?>
         };
 
-        <?php if ('right-fixed' === $position): ?>
-            options.<?php echo $this->getBadgePositionAlignment(); ?> = "<?php echo $this->getBadgePositionMargin() . $this->getBadgePositionUnit(); ?>";
+        <?php if ($this->isStandardBadgeEnabled()): ?>
+            options.position = "<?php echo $position; ?>";
+            <?php if ('right-fixed' === $position): ?>
+                options.<?php echo $this->getBadgePositionAlignment(); ?> = "<?php echo $this->getBadgePositionMargin() . $this->getBadgePositionUnit(); ?>";
+            <?php endif; ?>
+        <?php endif; ?>
+
+        <?php if ($this->isMobileEnabled()): ?>
+            options.enableMobile = "true";
         <?php endif; ?>
 
         <?php if ($currentProductId): ?>

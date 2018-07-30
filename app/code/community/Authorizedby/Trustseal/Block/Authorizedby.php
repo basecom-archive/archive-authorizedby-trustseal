@@ -6,6 +6,14 @@ class Authorizedby_Trustseal_Block_Authorizedby extends Mage_Core_Block_Template
         return Mage::getStoreConfigFlag('trustseal/config/activate');
     }
 
+    public function isMobileEnabled() {
+        return Mage::getStoreConfigFlag('trustseal/config/mobile');
+    }
+
+    public function isStandardBadgeEnabled() {
+        return Mage::getStoreConfigFlag('trustseal/config/standard_badge');
+    }
+
     public function getBadgePosition() {
         return Mage::getStoreConfig('trustseal/config/position');
     }
@@ -24,5 +32,29 @@ class Authorizedby_Trustseal_Block_Authorizedby extends Mage_Core_Block_Template
 
     public function getProductVerificationAttribute() {
         return Mage::getStoreConfig('trustseal/config/product_verifictation_attribute');
+    }
+
+    public function getLanguage() {
+        return Mage::getStoreConfig('trustseal/config/language');
+    }
+
+    public function isIslandEnabled() {
+        return Mage::getStoreConfig('trustseal/config/island');
+    }
+
+    public function getIslandPosition() {
+        return explode(',', Mage::getStoreConfig('trustseal/config/island_position'));
+    }
+
+    public function getIslandProductType() {
+        return Mage::getStoreConfig('trustseal/config/island_product_type');
+    }
+
+    public function getIslandFooterType() {
+        return Mage::getStoreConfig('trustseal/config/island_footer_type');
+    }
+
+    public function getZIndex() {
+        return Mage::getStoreConfig('trustseal/config/z_index');
     }
 }

@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Authorizedby_Trustseal>
-            <version>1.0.0</version>
+            <version>1.1.0</version>
         </Authorizedby_Trustseal>
     </modules>
     <global>
@@ -65,8 +65,19 @@
         <trustseal>
             <config>
                 <activate>1</activate>
+                <language>de</language>
+                <standard_badge>1</standard_badge>
                 <position>right-two-thirds</position>
+                <position_alignment>positionBottom</position_alignment>
+                <position_unit>%</position_unit>
+                <position_margin>50</position_margin>
                 <product_verifictation_attribute>sku</product_verifictation_attribute>
+                <island>1</island>
+                <island_position>catalog_product_view,footer</island_position>
+                <island_product_type>embedded-original-oval</island_product_type>
+                <island_footer_type>embedded-partner</island_footer_type>
+                <z_index>100</z_index>
+                <mobile>1</mobile>
             </config>
         </trustseal>
     </default>

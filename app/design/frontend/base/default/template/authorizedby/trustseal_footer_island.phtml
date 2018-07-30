@@ -1,0 +1,4 @@
+<?php /* @var $this Authorizedby_Trustseal_Block_Authorizedby */ ?>
+<?php if ($this->isEnabled() && $this->isIslandEnabled() && in_array('footer', $this->getIslandPosition())): ?>
+    <div authorizedby="<?php echo $this->getIslandFooterType(); ?>"></div>
+<?php endif; ?>
