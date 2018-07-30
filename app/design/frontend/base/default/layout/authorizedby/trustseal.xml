@@ -4,5 +4,17 @@
         <reference name="before_body_end">
             <block type="trustseal/authorizedby" name="authorizedby.trustseal" template="authorizedby/trustseal.phtml"/>
         </reference>
+        <reference name="footer">
+            <block type="trustseal/authorizedby" name="authorizedby.trustseal.island.footer" template="authorizedby/trustseal_footer_island.phtml"/>
+        </reference>
     </default>
+
+    <catalog_product_view>
+        <reference name="product.info">
+            <action method="setTemplate">
+                <template>authorizedby/catalog/product/view.phtml</template>
+            </action>
+            <block type="trustseal/authorizedby" name="authorizedby.trustseal.island.product" template="authorizedby/trustseal_product_island.phtml"/>
+        </reference>
+    </catalog_product_view>
 </layout>

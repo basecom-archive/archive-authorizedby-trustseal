@@ -23,6 +23,7 @@
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>0</show_in_store>
+                    <comment>If you need help or further support with the configuration, then send us a message to support@authorized.by.</comment>
                     <fields>
                         <activate>
                             <label>Activate</label>
@@ -33,11 +34,29 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
                         </activate>
+                        <language>
+                            <label>Language</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>trustseal/languageOptions</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </language>
+                        <standard_badge>
+                            <label>Enable standard badge</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </standard_badge>
                         <position>
                             <label>Position</label>
                             <frontend_type>select</frontend_type>
                             <source_model>trustseal/positionOptions</source_model>
-                            <sort_order>2</sort_order>
+                            <sort_order>4</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
@@ -47,7 +66,7 @@
                             <comment>Will only take place if position is set to 'Right Fixed'.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>trustseal/positionAlignmentOptions</source_model>
-                            <sort_order>3</sort_order>
+                            <sort_order>5</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
@@ -57,7 +76,7 @@
                             <comment>Will only take place if position is set to 'Right Fixed'.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>trustseal/positionAlignmentUnitOptions</source_model>
-                            <sort_order>4</sort_order>
+                            <sort_order>6</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
@@ -66,7 +85,7 @@
                             <label>Margin</label>
                             <comment>Will only take place if position is set to 'Right Fixed'.</comment>
                             <frontend_type>text</frontend_type>
-                            <sort_order>5</sort_order>
+                            <sort_order>7</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
@@ -75,11 +94,70 @@
                             <label>Attribute for Product Verification</label>
                             <frontend_type>select</frontend_type>
                             <source_model>trustseal/productVerificationAttributeOptions</source_model>
-                            <sort_order>6</sort_order>
+                            <sort_order>8</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
                         </product_verifictation_attribute>
+                        <island>
+                            <label>Enable Island Badge</label>
+                            <frontend_type>select</frontend_type>
+                            <comment>Will only take place if module is enabled.</comment>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </island>
+                        <island_position>
+                            <label>Island Badge Position</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <can_be_empty>1</can_be_empty>
+                            <comment>Will only take place if island badge is enabled.</comment>
+                            <source_model>trustseal/islandBadgePositionOptions</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </island_position>
+                        <island_product_type>
+                            <label>Product Island Badge (Verified Original)</label>
+                            <frontend_type>select</frontend_type>
+                            <comment>Will only take place if island badge is enabled.</comment>
+                            <source_model>trustseal/islandBadgeOriginalOptions</source_model>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </island_product_type>
+                        <island_footer_type>
+                            <label>Footer Island Badge (Authorized Partner)</label>
+                            <frontend_type>select</frontend_type>
+                            <comment>Will only take place if island badge is enabled.</comment>
+                            <source_model>trustseal/islandBadgePartnerOptions</source_model>
+                            <sort_order>12</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </island_footer_type>
+                        <z_index>
+                            <label>Z-Index</label>
+                            <comment>(default 100)</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>13</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </z_index>
+                        <mobile>
+                            <label>Enable Mobile</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>14</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </mobile>
                     </fields>
                 </config>
             </groups>
